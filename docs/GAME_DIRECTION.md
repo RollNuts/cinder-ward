@@ -35,6 +35,25 @@ The fantasy is:
 - Shut, brace, or break doors.
 - Spend scarce fuel, charge, or stamina.
 
+## First 30-Second Play Shape
+
+The first prototype should prove this:
+
+> A strong protagonist enters a collapsing ritual room and stabilizes it through violent action and smart handling, without a countdown timer.
+
+Sequence:
+
+1. The player enters a dark chapel or ward-room. A central safe light is active. Outside it, fog and silhouettes press inward.
+2. The protagonist can kill weak enemies quickly with a large readable arc.
+3. Two rifts open at the room edge. They are visible as pressure sources, not timer UI.
+4. The player can keep fighting, or carry a ritual material to a ward point.
+5. Carrying material reduces attack/mobility, creating Overcooked/Unrailed-style handling pressure without making the protagonist feel weak.
+6. Ignoring a rift makes the room state worse: more enemies, darker edges, weaker safe light, or cracked barricades.
+7. Spending a powerful attack can break a surround but consumes ward fuel or charge.
+8. The room ends with a reward choice that changes the next room: strike power, vision/safe light, ward handling, or noise control.
+
+This preserves the user's desired chaos and tension while avoiding a fixed time limit.
+
 ## Pressure Without Countdown
 
 The game should feel urgent without a visible clock.
@@ -73,4 +92,3 @@ The character must read as capable before the lore is explained.
 - One large threat silhouette or clear incoming group outside the light.
 - One visible action effect: swing arc, ward flare, or light beam.
 - Minimal UI: health, fuel/ward charge, carried target count only.
-
