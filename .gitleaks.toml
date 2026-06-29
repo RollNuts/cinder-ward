@@ -17,6 +17,7 @@ description = "Allow documentation that names forbidden categories without conta
 paths = [
   '''SECURITY\.md''',
   '''docs/PUBLICATION_POLICY\.md''',
-  '''docs/AI_ASSET_POLICY\.md'''
+  '''docs/AI_ASSET_POLICY\.md''',
+  '''\.github/workflows/repo-policy\.yml''',
+  '''\.gitleaks\.toml'''
 ]
-
