@@ -1,0 +1,36 @@
+name: Task
+description: Small implementation, research, or documentation task.
+title: "[task] "
+labels: ["type:task", "status:triage"]
+body:
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: What should change and why?
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
+      description: What is explicitly out of scope?
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true
+  - type: dropdown
+    id: public_risk
+    attributes:
+      label: Public safety risk
+      options:
+        - low
+        - license
+        - secret
+        - paid-api-output
+        - private-steam-data
+    validations:
+      required: true
+

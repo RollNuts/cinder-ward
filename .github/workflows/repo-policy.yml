@@ -1,0 +1,26 @@
+name: repo-policy
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: validate public repo policy
+        shell: bash
+        run: |
+          set -euo pipefail
+          forbidden_paths='(^|/)(private|secrets)(/|$)|research/media|references/private|assets/generated/unreviewed'
+          if git ls-files | grep -E "$forbidden_paths"; then
+            echo "Forbidden public path detected."
+            exit 1
+          fi
+          if git grep -n -E 'MESHY_API_KEY|BEGIN (RSA|OPENSSH|EC) PRIVATE KEY|Steamworks.*(secret|token|password|cert)' -- . ':!SECURITY.md' ':!docs/*.md'; then
+            echo "Secret-like text detected."
+            exit 1
+          fi
+

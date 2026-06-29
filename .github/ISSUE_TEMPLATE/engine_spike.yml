@@ -1,0 +1,32 @@
+name: Engine Spike
+description: Compare or validate engine/tool decisions.
+title: "[engine] "
+labels: ["type:spike", "area:engine", "status:triage"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Decision question
+    validations:
+      required: true
+  - type: textarea
+    id: candidates
+    attributes:
+      label: Candidates
+      description: Engines, packages, or tools being compared.
+    validations:
+      required: true
+  - type: textarea
+    id: test
+    attributes:
+      label: Test procedure
+      description: What hands-on check proves the decision?
+    validations:
+      required: true
+  - type: textarea
+    id: licensing
+    attributes:
+      label: License/commercial notes
+    validations:
+      required: true
+

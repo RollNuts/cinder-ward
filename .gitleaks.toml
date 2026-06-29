@@ -1,0 +1,22 @@
+title = "cinder-ward public safety gitleaks config"
+
+[[rules]]
+id = "meshy-api-key"
+description = "Meshy API keys must never be committed."
+regex = '''(?i)(MESHY_API_KEY|meshy[_-]?api[_-]?key)\s*[:=]\s*['"]?[A-Za-z0-9_\-]{20,}'''
+tags = ["key", "meshy", "ai"]
+
+[[rules]]
+id = "steam-private-data"
+description = "Steam partner private data must stay out of the public repo."
+regex = '''(?i)(steamworks|depot|app[_-]?id|publisher[_-]?key|partner[_-]?site).{0,32}(secret|token|key|password|cert|private)'''
+tags = ["steam", "private"]
+
+[allowlist]
+description = "Allow documentation that names forbidden categories without containing values."
+paths = [
+  '''SECURITY\.md''',
+  '''docs/PUBLICATION_POLICY\.md''',
+  '''docs/AI_ASSET_POLICY\.md'''
+]
+
