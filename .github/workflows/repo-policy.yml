@@ -19,8 +19,7 @@ jobs:
             echo "Forbidden public path detected."
             exit 1
           fi
-          if git grep -n -E 'MESHY_API_KEY|BEGIN (RSA|OPENSSH|EC) PRIVATE KEY|Steamworks.*(secret|token|password|cert)' -- . ':!SECURITY.md' ':!docs/*.md'; then
+          if git grep -n -E 'MESHY_API_KEY|BEGIN (RSA|OPENSSH|EC) PRIVATE KEY|Steamworks.*(secret|token|password|cert)' -- . ':!SECURITY.md' ':!docs/*.md' ':!.github/workflows/repo-policy.yml' ':!.gitleaks.toml'; then
             echo "Secret-like text detected."
             exit 1
           fi
-
